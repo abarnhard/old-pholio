@@ -1,0 +1,298 @@
+// http://clrs.cc/
+
+@NAVY:    #001F3F;
+@BLUE:    #0074D9;
+@AQUA:    #7FDBFF;
+@TEAL:    #39CCCC;
+@OLIVE:   #3D9970;
+@GREEN:   #2ECC40;
+@LIME:    #01FF70;
+@YELLOW:  #FFDC00;
+@ORANGE:  #FF851B;
+@RED:     #FF4136;
+@MAROON:  #85144B;
+@FUCHSIA: #F012BE;
+@PURPLE:  #B10DC9;
+@BLACK:   #111111;
+@GRAY:    #AAAAAA;
+@SILVER:  #DDDDDD;
+@WHITE:   #FFFFFF;
+
+// FLAT-UI THEME //
+@THEME_NAVY:  #2C3E50;
+@THEME_RED:   #E74C3C;
+@THEME_WHITE: #ECF0F1;
+@THEME_BLUE:  #3498DB;
+@THEME_DBLUE: #2980B9;
+
+/*
+  Allow angular.js to be loaded in body, hiding cloaked elements until
+  templates compile.  The !important is important given that there may be
+  other selectors that are more specific or come later and might alter display.
+*/
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+/*------------------------------
+	MAIN
+------------------------------*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: @WHITE;
+	overflow-x:hidden;
+}
+
+#content-container {
+  position: relative;
+}
+
+/*------------------------------
+   BUTTONS
+------------------------------*/
+.btn:hover {
+	transition-duration: 0.4s;
+}
+
+/*------------------------------
+   NAVBAR
+------------------------------*/
+.navbar-logo {
+	padding: 7px;
+	width: 50px;
+}
+
+.navbar {
+  margin-bottom: 15px;
+  background-color: @THEME_NAVY;
+}
+
+.navbar.navbar-default {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: @WHITE;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: @WHITE;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: @WHITE;
+  font-size: 1.5em;
+	border-left: 4px solid transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	transition-duration:0.7s;
+	color: @THEME_DBLUE;
+	border-left: 4px solid @THEME_DBLUE;
+}
+
+.navbar-header a.navbar-brand {
+  color: @WHITE;
+  font-size: 1.5em;
+}
+
+.navbar-header a.navbar-brand:hover {
+  transition-duration:0.7s;
+  color: @THEME_DBLUE;
+}
+
+/*------------------------------
+   HOME
+------------------------------*/
+.profile-img-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.profile-img {
+  max-width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.profile-pic-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.profile-pic{
+  // display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/ab-profile_bw.png);
+  background-size: cover;
+}
+
+.social-wrapper {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.social-wrapper ul {
+  list-style:none;
+	padding-left:0;
+}
+
+.social-wrapper ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.social-wrapper ul > li > a {
+	text-align: center;
+  color: @THEME_BLUE;
+	display: inline-block;
+	font-size: 3em;
+	padding: 5px 20%;
+  border-top: 3px solid transparent;
+	width: 50px;
+	height: 50px;
+}
+
+.social-wrapper ul > li > a:hover {
+  color: @THEME_DBLUE;
+  transition-duration: 0.2s;
+	border-top: 3px solid @THEME_DBLUE;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons a.btn {
+  margin-right: 10px;
+}
+
+.buttons a.btn.btn-default {
+  color: @THEME_BLUE;
+	border: 1px solid @THEME_BLUE;
+	border-bottom:3px solid @THEME_BLUE;
+	background-color:transparent;
+}
+
+.buttons a.btn.btn-default:hover {
+  border: 1px solid @THEME_DBLUE;
+	border-bottom: 3px solid @THEME_DBLUE;
+	color: @THEME_DBLUE;
+}
+.about {
+  font-size: 1.3em;
+}
+
+.bio li {
+  text-align: left;
+}
+/*------------------------------
+   PROJECTS
+------------------------------*/
+.projects {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.projects figure {
+  display: inline-block;
+}
+
+.projects h4 {
+  margin-bottom: 15px;
+}
+
+figure > a > div {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+figcaption .name {
+  font-weight: bold;
+  margin-top: 5px;
+}
+/*******************************
+   MEDIA QUERIES
+*******************************/
+
+/*------------------------------
+	MEDIUM DEVICES
+------------------------------*/
+
+@media (min-width:992px) and (max-width:1199px) {
+
+}
+
+/*------------------------------
+	SMALL DEVICES
+------------------------------*/
+
+@media (min-width:768px) and (max-width:991px) {
+
+}
+
+/*------------------------------
+	EXTRA SMALL DEVICES
+------------------------------*/
+
+@media (max-width:767px) {
+  .about {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .about > h2 {
+    display: inline-block;
+  }
+
+  .about ol {
+    display: inline-block;
+  }
+
+  .projects {
+    margin-bottom: 0;
+  }
+}
+
+/*------------------------------
+	PHONES 600px width
+------------------------------*/
+
+@media (max-width:600px) {
+
+}
+/*------------------------------
+	PHONES 548px width
+------------------------------*/
+
+@media (max-width:548px) {
+
+}
+
+/*------------------------------
+	PHONES 480px width
+------------------------------*/
+
+@media (max-width:480px) {
+
+}
+
+/*------------------------------
+	PHONES 320px width
+------------------------------*/
+
+@media (max-width:320px) {
+
+}

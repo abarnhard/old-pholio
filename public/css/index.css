@@ -1,0 +1,511 @@
+/*
+  Allow angular.js to be loaded in body, hiding cloaked elements until
+  templates compile.  The !important is important given that there may be
+  other selectors that are more specific or come later and might alter display.
+*/
+[ng\:cloak],
+[ng-cloak],
+.ng-cloak {
+  display: none !important;
+}
+/*------------------------------
+	MAIN
+------------------------------*/
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+a,
+a:focus,
+a:hover {
+  outline: 0 none;
+  text-decoration: none;
+}
+p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 28px;
+}
+h2 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: 'Montserrat';
+  font-size: 56px;
+}
+h3 {
+  color: #ffffff;
+  font-family: 'Alegreya Sans SC';
+}
+h4 {
+  color: #ffffff;
+  font-family: 'Alegreya Sans SC';
+  margin-top: 0;
+}
+#wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+/*------------------------------
+	BUTTONS
+------------------------------*/
+.btn,
+.btn:hover,
+.btn:focus {
+  font-family: 'Montserrat';
+  border-bottom: 4px solid #ffffff;
+  color: #ffffff;
+}
+.btn:hover {
+  transition-duration: 0.4s;
+}
+.btn-primary {
+  background-color: #ed5a64;
+  border-color: #db4f58;
+}
+.btn-footer {
+  background-color: #ffffff;
+  color: #2c3e50;
+  margin-left: 5px;
+}
+.btn-footer:hover {
+  background-color: #2c3e50;
+}
+.btn-primary:hover {
+  background-color: #16a085;
+  color: #34495E;
+  background-color: #db4f58;
+  color: #ffffff;
+  border-color: #db4f58;
+}
+.btn-reference {
+  border: 1px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  background-color: transparent;
+}
+.btn-reference:hover,
+.btn-reference.btn-active {
+  border: 1px solid #16a085;
+  border-bottom: 3px solid #16a085;
+  color: #16a085;
+}
+/*------------------------------
+	NAVBAR
+------------------------------*/
+.navbar-default {
+  margin: 0;
+  background-color: #2c3e50;
+  border: none;
+  border-radius: 0;
+  height: 78px;
+  padding-top: 3px;
+  border-bottom: 8px inset #333;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+}
+.navbar-default .navbar-brand {
+  font-family: 'Montserrat';
+  padding: 23px 0 0 25px;
+  color: #16a085;
+  font-size: 24px;
+}
+.navbar-logo {
+  padding: 7px 0 0 0;
+  width: 50px;
+}
+.navbar-default .navbar-brand:hover {
+  transition-duration: 0.7s;
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  font-family: 'Alegreya Sans SC';
+  margin-top: 6px;
+  font-size: 18px;
+  border-left: 4px solid transparent;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  transition-duration: 0.7s;
+  color: #16a085;
+  border-left: 4px solid #16a085;
+}
+.navbar-collapse {
+  margin: 0;
+  background-color: #2c3e50;
+  border: none;
+  border-radius: 0;
+  height: auto;
+  padding-top: 3px;
+  overflow-x: hidden;
+  z-index: 10;
+}
+/*------------------------------
+	HOME
+------------------------------*/
+.home {
+  text-align: center;
+  background-color: #2f4254;
+  height: 100%;
+}
+.social-wrapper {
+  text-align: center;
+}
+.jumbotron {
+  margin: 0;
+  background-color: #2f4254;
+  height: auto;
+}
+.jumbotron img {
+  margin: 0 auto 0 auto;
+  max-height: 350px;
+  margin-bottom: 15px;
+}
+.social-wrapper h2 {
+  display: inline;
+  padding: 0 15px 0 15px;
+  font-size: 78px;
+}
+.brands {
+  display: inline;
+  list-style: none;
+  padding-left: 0;
+}
+.brands > li {
+  margin: 0 0 8px;
+}
+.brands-inline > li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.brands > li > a {
+  background-color: transparent;
+  color: #ffffff;
+  border-top: 3px solid #16a085;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  padding-top: 11px;
+  width: 50px;
+  height: 50px;
+}
+.brands > li > a:hover {
+  color: #16a085;
+  transition-duration: 0.2s;
+  border-top: 3px solid #2f4254;
+}
+#slideshow .icon-first {
+  color: #ed5a64;
+}
+#slideshow i {
+  color: #16a085;
+}
+.carousel-inner {
+  margin-bottom: 15px;
+}
+.jumbotron .btn {
+  margin-right: 15px;
+}
+/*------------------------------
+  MEDIUM DEVICES
+------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel .carousel-control {
+    top: 140px;
+  }
+  #blog .line i {
+    left: 138px;
+  }
+  #contact .macbook-inner {
+    top: 56px;
+    left: 137px;
+    width: 697px;
+    height: 435px;
+  }
+  #contact .form-control {
+    margin-bottom: 9px;
+  }
+  #contact textarea.form-control {
+    height: 100px;
+  }
+  .contact-image {
+    width: 74px;
+  }
+}
+/*------------------------------
+  SMALL DEVICES
+------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    height: auto;
+  }
+  #skills-toggle {
+    margin-top: 25px;
+  }
+  #services {
+    height: auto;
+  }
+  #carousel-reference {
+    top: 24px;
+    right: 35px;
+    left: 35px;
+  }
+  .carousel .carousel-control {
+    top: 100px;
+  }
+  #blog .line i {
+    left: 100px;
+  }
+  #contact .macbook-inner {
+    top: 43px;
+    left: 108px;
+    width: 535px;
+    height: 334px;
+    padding: 40px 20px;
+  }
+  #contact .form-control {
+    margin-bottom: 7px;
+    height: 28px;
+  }
+  #contact textarea.form-control {
+    height: 70px;
+  }
+  #contact h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+  }
+  .macbook-inner .btn {
+    padding: 4px 8px;
+  }
+  .tweets p {
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+/*------------------------------
+  EXTRA SMALL DEVICES
+------------------------------*/
+@media (max-width: 767px) {
+  .navbar-collapse {
+    box-shadow: none;
+  }
+  .navbar-default {
+    height: 58px;
+  }
+  .navbar-logo {
+    padding: 5px 0 0 15px;
+    width: 55px;
+  }
+  .navbar-toggle {
+    margin-top: 8px;
+    background-color: #EEEEEE;
+    border: 0;
+    padding: 6px 10px;
+  }
+  .navbar-brand {
+    top: -9px;
+    position: relative;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .content-first {
+    padding: 30px 0;
+  }
+  .content-second {
+    padding: 30px 0;
+  }
+  .scrollpoint {
+    opacity: 1;
+  }
+  header {
+    height: auto;
+  }
+  .social-wrapper h2 {
+    display: inline;
+    padding: 0 15px 0 15px;
+    font-size: 38px;
+  }
+  /*
+  .jumbotron img {
+    max-height:150px;
+  }
+  */
+  #about {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .tweets p {
+    line-height: 22px;
+  }
+  #skills-toggle {
+    margin-top: 25px;
+  }
+  #blog .blog-main p {
+    padding-bottom: 15px;
+    border-bottom: 4px dashed #2c3e50;
+  }
+  .blog-post {
+    margin: 0 50px 25px;
+  }
+  .blog-body p {
+    text-align: left;
+    font-size: 14px;
+  }
+  #skills {
+    padding: 10px 0;
+  }
+  #skills .chart {
+    margin-bottom: 50px;
+  }
+  .tweets {
+    min-height: 90px;
+  }
+  .tweets p {
+    font-size: 12px;
+  }
+  .tweets i {
+    font-size: 48px;
+    color: #34495E;
+  }
+  #services {
+    height: auto;
+  }
+  .showcase-text .media {
+    margin-bottom: 20px;
+  }
+  .blockquote-reverse p {
+    font-size: 16px;
+  }
+  blockquote footer {
+    font-size: 14px;
+  }
+  .grid li {
+    width: 370px;
+  }
+  section > p {
+    padding: 0 20px;
+  }
+  .pricing-table {
+    margin: 0 50px;
+  }
+  #testimonials .media a.pull-left img {
+    max-width: 50px;
+  }
+  #testimonials .media .media-body p {
+    text-align: left;
+  }
+  #contact {
+    padding: 20px;
+  }
+  #contact .macbook-inner {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0px 0px;
+  }
+  #contact .macbook-inner.black {
+    background-color: transparent;
+  }
+  #contact .macbook-inner > .animated {
+    -webkit-animation-duration: 0;
+    animation-duration: 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  #contact .contact-info {
+    margin-top: 35px;
+  }
+  .btn-footer {
+    margin-top: 10px;
+  }
+  .timeline {
+    margin: 25px 0 0 350px;
+  }
+  .event .event-info {
+    width: 340px;
+  }
+  .event .event-info .date {
+    margin-left: 265px;
+  }
+}
+/*------------------------------
+  PHONES 548px width
+------------------------------*/
+@media (max-width: 600px) {
+  .timeline {
+    margin: 25px 0 0 270px;
+  }
+  .event .event-info {
+    width: 260px;
+  }
+  .event .event-info .date {
+    margin-left: 185px;
+  }
+}
+/*------------------------------
+  PHONES 548px width
+------------------------------*/
+@media (max-width: 548px) {
+  .timeline {
+    margin: 25px 0 0 245px;
+  }
+  .event .event-info {
+    width: 235px;
+  }
+  .event .event-info .date {
+    margin-left: 160px;
+  }
+  .grid li {
+    width: 370px;
+  }
+  .pricing-table {
+    margin: 0 50px;
+  }
+}
+/*------------------------------
+  PHONES 480px width
+------------------------------*/
+@media (max-width: 480px) {
+  .timeline {
+    margin: 25px 0 0 210px;
+  }
+  .event .event-info {
+    width: 200px;
+  }
+  .event .event-info .date {
+    margin-left: 125px;
+  }
+}
+/*------------------------------
+  PHONES 320px width
+------------------------------*/
+@media (max-width: 320px) {
+  .jumbotron .btn {
+    margin-bottom: 15px;
+    margin-right: 0px;
+  }
+  .tweets p {
+    line-height: 18px;
+  }
+  .blog-post {
+    margin: 0 0 25px;
+  }
+  .timeline {
+    margin: 25px 0 0 110px;
+  }
+  .event .event-info {
+    width: 100px;
+  }
+  .event .event-info .date {
+    margin-left: 25px;
+  }
+  .grid li {
+    width: 280px;
+  }
+  .pricing-table {
+    margin: 0;
+  }
+}

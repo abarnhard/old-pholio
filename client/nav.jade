@@ -1,0 +1,16 @@
+.navbar.navbar-default(role='navigation', ng-controller='NavCtrl')
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle(data-toggle='collapse', data-target='#bs-navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      img.navbar-logo.pull-left.hidden-xs.ng-cloak(src='public/assets/img/ab-profile_bw.png', alt='Adam Barnhard', ng-show='showImg', ng-cloak)
+      a.navbar-brand.ng-cloak(ng-cloak, ng-show='showImg', href='/#/') Adam Barnhard
+    .collapse.navbar-collapse#bs-navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li: a(href='/#/') Home
+        li: a(href='/#/projects') Projects
+        //- li: a(href='/#/skills') Skills
+        li: a(href='mailto:admbarn@gmail.com') Contact

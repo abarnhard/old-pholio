@@ -1,0 +1,207 @@
+/*
+  Allow angular.js to be loaded in body, hiding cloaked elements until
+  templates compile.  The !important is important given that there may be
+  other selectors that are more specific or come later and might alter display.
+*/
+[ng\:cloak],
+[ng-cloak],
+.ng-cloak {
+  display: none !important;
+}
+/*------------------------------
+	MAIN
+------------------------------*/
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+#content-container {
+  position: relative;
+}
+/*------------------------------
+   BUTTONS
+------------------------------*/
+.btn:hover {
+  transition-duration: 0.4s;
+}
+/*------------------------------
+   NAVBAR
+------------------------------*/
+.navbar-logo {
+  padding: 7px;
+  width: 50px;
+}
+.navbar {
+  margin-bottom: 15px;
+  background-color: #2c3e50;
+}
+.navbar.navbar-default {
+  border-radius: 0;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  font-size: 1.5em;
+  border-left: 4px solid transparent;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  transition-duration: 0.7s;
+  color: #2980b9;
+  border-left: 4px solid #2980b9;
+}
+.navbar-header a.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+.navbar-header a.navbar-brand:hover {
+  transition-duration: 0.7s;
+  color: #2980b9;
+}
+/*------------------------------
+   HOME
+------------------------------*/
+.profile-img-wrapper {
+  position: relative;
+  text-align: center;
+}
+.profile-img {
+  max-width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+.profile-pic-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+.profile-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/ab-profile_bw.png);
+  background-size: cover;
+}
+.social-wrapper {
+  margin-top: 5px;
+  text-align: center;
+}
+.social-wrapper ul {
+  list-style: none;
+  padding-left: 0;
+}
+.social-wrapper ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.social-wrapper ul > li > a {
+  text-align: center;
+  color: #3498db;
+  display: inline-block;
+  font-size: 3em;
+  padding: 5px 20%;
+  border-top: 3px solid transparent;
+  width: 50px;
+  height: 50px;
+}
+.social-wrapper ul > li > a:hover {
+  color: #2980b9;
+  transition-duration: 0.2s;
+  border-top: 3px solid #2980b9;
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons a.btn {
+  margin-right: 10px;
+}
+.buttons a.btn.btn-default {
+  color: #3498db;
+  border: 1px solid #3498db;
+  border-bottom: 3px solid #3498db;
+  background-color: transparent;
+}
+.buttons a.btn.btn-default:hover {
+  border: 1px solid #2980b9;
+  border-bottom: 3px solid #2980b9;
+  color: #2980b9;
+}
+.about {
+  font-size: 1.3em;
+}
+.bio li {
+  text-align: left;
+}
+/*------------------------------
+   PROJECTS
+------------------------------*/
+.projects {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.projects figure {
+  display: inline-block;
+}
+.projects h4 {
+  margin-bottom: 15px;
+}
+figure > a > div {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  background-size: cover;
+}
+figcaption .name {
+  font-weight: bold;
+  margin-top: 5px;
+}
+/*******************************
+   MEDIA QUERIES
+*******************************/
+/*------------------------------
+	MEDIUM DEVICES
+------------------------------*/
+/*------------------------------
+	SMALL DEVICES
+------------------------------*/
+/*------------------------------
+	EXTRA SMALL DEVICES
+------------------------------*/
+@media (max-width: 767px) {
+  .about {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .about > h2 {
+    display: inline-block;
+  }
+  .about ol {
+    display: inline-block;
+  }
+  .projects {
+    margin-bottom: 0;
+  }
+}
+/*------------------------------
+	PHONES 600px width
+------------------------------*/
+/*------------------------------
+	PHONES 548px width
+------------------------------*/
+/*------------------------------
+	PHONES 480px width
+------------------------------*/
+/*------------------------------
+	PHONES 320px width
+------------------------------*/

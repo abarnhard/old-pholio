@@ -1,0 +1,33 @@
+doctype html
+html(ng-app='portfolio', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    title Adam Barnhard
+
+    link(href='public/vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='public/vendor/fontawesome/css/font-awesome.min.css', rel='stylesheet')
+    link(href='public/css/style.css', rel='stylesheet')
+    //[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]
+      
+  body
+    include nav
+    #content-container.container-fluid(ng-view)
+    
+    script(src='public/vendor/jquery/dist/jquery.min.js')
+    script(src='public/vendor/angular/angular.min.js')
+    script(src='public/vendor/angular-route/angular-route.min.js')
+    script(src='public/vendor/bootstrap/dist/js/bootstrap.min.js')
+    script(src='public/vendor/d3/d3.min.js')
+    script(src='public/index.js')
+    script(src='public/nav.js')
+    script(src='public/views/home/home.js')
+    script(src='public/views/about/about.js')
+    script(src='public/views/contact/contact.js')
+    script(src='public/views/projects/projects.js')
+    script(src='public/views/skills/skills.js')

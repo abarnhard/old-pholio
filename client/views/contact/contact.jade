@@ -1,0 +1,33 @@
+section#contact.content-first
+  .container
+    h2.scrollpoint.sp-effect3 Contact me
+    .row
+      // PRICING TABLE FIRST - start
+      .col-sm-12
+        img.img-responsive.hidden-xs(src='public/assets/image/macbook.png', alt='')
+        .macbook-inner.black
+          .row.scrollpoint.sp-effect4
+            .col-sm-8
+              h3.hidden-xs Leave a message
+              form
+                fieldset
+                  .form-group
+                    label.sr-only(for='firstname') First Name
+                    input#firstname.form-control(type='text', placeholder='First Name')
+                  .form-group
+                    label.sr-only(for='lastname') Last Name
+                    input#lastname.form-control(type='text', placeholder='Last Name')
+                  .form-group
+                    label.sr-only(for='email') Email
+                    input#email.form-control(type='email', placeholder='Email')
+                  .form-group
+                    label.sr-only(for='message') Message
+                    textarea#message.form-control(placeholder='Message')
+                  button.btn.btn-primary Send message
+            .col-sm-4
+              img.contact-image.image-responsive.hidden-xs.hidden-sm(src='public/assets/image/jonathan.png', alt='')
+              .contact-info
+                p John Doe
+                p 795 Folsom Ave, Suite 600
+                p San Francisco, CA 94107
+                p 123-456-7890
